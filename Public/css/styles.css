@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+:root{
+    --main-colour-pink :#b6244f;
+    --secondary-colour-pink: #ff70a2;
+    --main-colour-blue:#044b7f;
+    --secondary-colour-blue: #6ccff6;
+    --background-colour: #FEF9FF;
+    --secondary-background-colour:#171738;
+    --white:#FFFFFF;
+    --black:#161C27;
+    --dark:#2B2D42;
+    --muted:#364156;
+    --success:#41E2BA;
+    --warning:#F7E733;
+    --danger: #ED1C24;
+    --card-border-radius:2rem;
+    --border-raduis-main:0.4rem;
+    --border-radius-sec:1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-main:1.2rem;
+
+    --main-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --secondary-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+    overflow: hidden;
+    color: var(--black);
+    background-color: var(--background-colour);
+}
+a{
+    color: var(--black);
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+h3{
+    font-weight: 500;
+    font-size: .87rem;
+}
+
+small{
+    font-size: 0.76rem;
+}
+ul{
+    list-style: none;
+}
+p{
+    color: var(--black);
+}
+
+.text-muted{
+    color: var(--muted);
+}
+.success{
+    color: var(--success);
+}
+.warning{
+    color: var(--warning);
+}
+.danger{
+    color: var(--danger);
+}
+.containing{
+    width: 80vw;
+    margin: 0 auto;
+}
+.navbar{
+    background-color: var(--background-colour);
+    padding: 25px 0px 13px 0px;
+}
+.navbar-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+.collapsable-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+}
+.nav-links a{
+    padding: 0 1rem ;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.nav-links a.active{
+    color: var(--main-colour-pink);
+}
+
+.sign-in a{
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    background-color: var(--main-colour-blue);
+    color: var(--white);
+    border-radius: var(--border-raduis-main);
+}
+
+
+.menu-button{
+    display: none;
+}
