@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 :root{
-    --main-colour-pink :#b6244f;
+    --main-colour-pink :#ED217C;
     --secondary-colour-pink: #ff70a2;
     --main-colour-blue:#044b7f;
     --secondary-colour-blue: #6ccff6;
@@ -23,6 +23,9 @@
 
     --main-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     --secondary-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    --transition-main:transform 0.25s ease-in-out;
+    --transition-sec:transform 3s ease-in;
 }
 
 *{
@@ -41,7 +44,6 @@ html{
 
 body{
     width: 100vw;
-    height: 100vh;
     font-family: 'Poppins', sans-serif;
     user-select: none;
     overflow: hidden;
@@ -111,7 +113,7 @@ p{
     font-weight: 800;
     font-size: 1.8rem;
 }
-.collapsable-menu{
+.nav-items{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,9 +126,14 @@ p{
     padding: 0 1rem ;
     text-transform: uppercase;
     font-weight: 500;
+    transition: var(--transition-sec);
 }
+
 .nav-links a.active{
     color: var(--main-colour-pink);
+}
+.nav-links li a:hover{
+    color: var(--main-colour-pink) !important;
 }
 
 .sign-in a{
@@ -135,9 +142,71 @@ p{
     background-color: var(--main-colour-blue);
     color: var(--white);
     border-radius: var(--border-raduis-main);
+    transition: var(--transition-sec);
 }
-
+.sign-in a:hover{
+    color: var(--secondary-colour-pink);
+}
 
 .menu-button{
     display: none;
+}
+@media (max-width:700px) {
+    .menu-button{
+        display:block;
+    }
+    .nav-items{
+        display: block;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 22;
+        padding-left: 3.6rem;
+        transform: translateX(100%);
+        transition: transform 0.25s ease-in-out;
+    }
+    .nav-items.show{
+        transform: translateX(0);
+    }
+    .nav-items .nav-links{
+        display: block;
+    }
+    .nav-links li{
+        padding: 1rem 0;
+    }
+    .nav-items .sign-in{
+        padding: 1rem 12px;
+    }
+}
+
+.hero{
+    text-align: center;
+}
+.hero .containing{
+    padding-top:2rem ;
+}
+.hero h1{
+    font-size: 3rem;
+}
+.hero h6 {
+    font-size: 1.3rem;
+    padding: 15px ;
+    font-weight: 400;
+}
+.hero button{
+    padding: .6rem 1rem;
+    background-color: var(--main-colour-blue);
+    opacity: 0.7;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+.hero button:hover{
+    opacity: 1;
+    background-color: var(--main-colour-pink);
+}
+.hero img{
+    width: 50%;
+    margin: 0 auto;
 }
